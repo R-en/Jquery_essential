@@ -7,6 +7,11 @@
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
     <script type="text/javascript">
         $("document").ready(function() {
+            //$("div > p").css("border", "3px solid red");
+            //$("div p.a").css("border", "3px solid red");
+            //$("ul + div").css("border", "3px solid red");//adjacent
+            $("#para1 ~ p").css("border", "3px solid red");//next elements//after para1 p
+  
         });
     </script>
 </head>
