@@ -7,6 +7,16 @@
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
     <script type="text/javascript">
         $("document").ready(function() {
+            //$("p:contains('3')").css("border", "3px solid red");//string contains 3
+            //$("p:parent").css("border", "3px solid red");//text inside//contain at least 1 child
+            //$("p:parent").css("border", "3px solid red");
+            //$("div:has(p[class=a])").css("border", "3px solid red");
+            //$("div p:first-child").css("border", "3px solid red");//if p is the fisrt child of div 
+             //$("div p:last-of-type").css("border", "3px solid red");//last child of each type//p, ul, div 
+            //$("div p:nth-child(3)").css("border", "3px solid red");
+            $("div p:nth-child(2n)").css("border", "3px solid red");//even num
+
+
         });
     </script>
 </head>
