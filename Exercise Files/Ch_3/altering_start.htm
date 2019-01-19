@@ -7,7 +7,23 @@
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
     <script type="text/javascript">
     $("document").ready(function() {
+        //$("#example p").wrap("<div style='color:red' />" );//wrap each one indivisually
+        //$("#example p").wrapAll("<div style='color:red' />" );
+        //$("#example").empty();
+        //$("#example p.a, #example p.b").remove();
+        //$("#example p.a, #example p.b").detach();//keeps data
+        //$("<div> Replaced </p>").replaceAll("#example p[id]");
+        //$("#example p[id]").replaceWith("<div> Replaced With </div>");
+        $("#example p").replaceWith(replacementFn);
     });
+        
+        function replacementFn(){
+            if($(this).text().indexOf("1") != -1){//-1 means not found
+                return "<p> This is paragraph uno </P>";
+            }else{
+                return this.outerHTML;
+            }
+        }
     </script>
 </head>
 

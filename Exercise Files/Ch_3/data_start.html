@@ -8,10 +8,15 @@
     <script>
         $("document").ready(function() {
             document.getElementById("show").addEventListener("click", function (evt) {
+                alert(JSON.stringify($("#example").data(), null, " "));
             });
             document.getElementById("store").addEventListener("click", function (evt) {
+                $("#example").data({
+                "key1": 1234,
+                "key2": "Ren"});
             });
             document.getElementById("remove").addEventListener("click", function (evt) {
+                $("#example").removeData("key2");
             });
         });
     </script>
