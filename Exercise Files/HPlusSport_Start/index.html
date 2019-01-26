@@ -52,6 +52,18 @@
                 updateProductView("proteinbar", evt.target.checked);
             });
           
+          $(".product-item").each(function(){
+              var prodName =
+                  encodeURIComponent($(this).children("h2").text());
+              var prodID =
+                  encodeURIComponent($(this).data("prod_id"));
+              
+              var link= $("<a href='product.html?prodName=" + prodName + 
+                         "&prodID=" + prodID + "'/>");
+              $(this).children("img").wrap(link);
+          })
+          
+          
       });
       
       function updateProductView(categoryName, bVisible) {
