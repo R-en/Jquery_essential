@@ -8,11 +8,18 @@
     <script type="text/javascript">
         $(function() {
             $("#show").click(function() {
+                $("#theDiv").show("fast");
             });
             $("#hide").click(function() {
+                $("#theDiv").hide(1000, "linear");
             });
             $("#toggle").click(function() {
+                $("#theDiv").toggle("slow", completion);
             });
+            
+            function completion(){
+                $(this).text("Animation Completed");
+            }
         });
     </script>
     <style type="text/css">
@@ -40,6 +47,7 @@
         </ul>
         <div id="theDiv" class="box">
         </div>
+        
         <button id="show">Show</button>
         <button id="hide">Hide</button>
         <button id="toggle">Toggle</button>
